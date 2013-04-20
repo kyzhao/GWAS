@@ -1,13 +1,13 @@
 ## suppose you have plinkfileprefix.ped plinkfileprefix.map for genotypes.
 
-tmpgenoprefix <- "plinkLDpruned_allchrs" ## as example
+tmpgenoprefix <- "plinkfileprefix" ## as example
 
 plinkcmmd <- paste ("plink --noweb", tmpgenoprefix,  "--recodeA --out ", tmpgenoprefix )
 
 ## first run the following 3 lines on command line: 
-# plink --noweb --file  plinkLDpruned_allchrs  --recodeA --out plinkLDpruned_allchrs
-#cut -d" " -f1-6 plinkLDpruned_allchrs.raw > plinkLDpruned_allchrs.fam
-#cut -d" " -f7- plinkLDpruned_allchrs.raw > plinkLDpruned_allchrs.raw0
+# plink --noweb --file  plinkfileprefix  --recodeA --out plinkfileprefix
+#cut -d" " -f1-6 plinkfileprefix.raw > plinkfileprefix.fam
+#cut -d" " -f7- plinkfileprefix.raw > plinkfileprefix.raw0
 
 ## then run this R script to scan in the genotype and save as RData. 
 
